@@ -11,11 +11,10 @@ $path = 'P6xxHS'
 # List all drivers
 $list = .\list.ps1 $hostUrl $path
 
-# Download and unzip all drivers
+# Download all drivers
 $list | % {
   write-host downloading $_
   .\download.ps1 $hostUrl $_
-  .\unzip.ps1 $_
 }
 ```
 

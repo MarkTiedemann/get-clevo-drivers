@@ -21,8 +21,7 @@ function parse ($lines) {
   where { $_.name -ne '..' }
 }
 
-function list ($hostUrl, $path)
-{
+function list ($hostUrl, $path) {
   $uri = new-object System.Uri(($hostUrl + '/' + $path))
   $req = [Net.WebRequest]::Create($uri)
   $req.Method = 'LIST'
